@@ -1,0 +1,11 @@
+.tabHeader{
+    position: absolute;
+    left: 20%;
+    top: 6%;
+}
+.hr{
+    margin-top: 10%;
+    margin-left: 20%;
+    border: 1px solid red !important;
+
+}

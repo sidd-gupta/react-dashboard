@@ -1,0 +1,97 @@
+.v2 {
+    display: block;
+    position: absolute;
+    box-sizing: content-box;
+    background-color: rgba(241, 241, 241, 1);
+}
+
+.v2 .rectangle1 {
+    top:0%;
+    position: fixed;
+    background-image: linear-gradient(#731A83,#cc56f2);
+    width: 17%;
+    height: 100%;
+}
+
+.kaiburr{
+    width: 50%;
+    height:10%;
+    position: absolute;
+    left: 23%;        
+    
+}
+
+.v2 .workSpace {
+    position: absolute;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-size: 250%;
+    font-weight: 40%;
+    font-style: normal;
+    font-family: 'Segoe UI', Arial;
+    width: 100%;
+    height: 0.5%;
+    top: 13%;
+    overflow: none;   
+}
+
+.v2 .tabcontent {
+    position: absolute;
+    text-align: left;
+    color: black;
+    font-size: 140%;
+    font-weight: 20%;    
+    font-style: normal;
+    font-family: 'Segoe UI', Arial;
+    width: 100%;
+    margin-top: 45%;
+    height: 0.5%;
+    margin-left: 15%;
+}
+
+.menu{
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    margin-left: 3.5%;
+}
+
+.menuHeader{
+    position: absolute;
+    text-align: center;
+    color:black;
+    font-size: 170%;
+    font-weight: 40%;
+    font-style: normal;
+    font-family: 'Segoe UI', Arial;
+    height: 0.5%;
+    margin-left: 2%;
+    margin-top: 20%;
+    overflow: none;   
+}
+
+@media screen and (max-width: 768px){
+    .v2 .rectangle1 {
+        position: fixed;
+        background-image: linear-gradient(#731A83,#cc56f2);
+        width: 33%;
+        height: 100%;
+    }
+    .kaiburr{
+        width: 81%;
+        height: 11%;
+        position: absolute;
+        left: 11%
+        
+    }
+    .v2 .workSpace {
+        font-size: 120%;
+    }
+    .menuHeader{   
+        margin-top: 38%;   
+    }
+    .v2 .tabcontent {
+        margin-top: 114%;
+        width: 90%
+    }
+}
