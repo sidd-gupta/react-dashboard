@@ -89,9 +89,11 @@
     }
     .menuHeader{   
         margin-top: 38%;   
+        margin-left: -7%;
     }
     .v2 .tabcontent {
-        margin-top: 114%;
+        margin-top: 124%;
+        margin-left: 5%;
         width: 90%
     }
 }

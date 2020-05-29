@@ -5,8 +5,10 @@ class ShowServer extends Component {
     console.log(process.env.REACT_APP_DB_URL);
     return (
       <React.Fragment>
-        <h3 className="tabHeader">Server List</h3>
-        <hr className="hr" />
+        <div className="ShowServer">
+          <h3><b>Server List</b></h3>
+          <hr className="hr" />
+        </div>
       </React.Fragment>
     );
   }

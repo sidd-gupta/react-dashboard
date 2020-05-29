@@ -1,4 +1,4 @@
-.ShowServer{
+.AddServer{
     position: absolute;
     margin-left: 20%;
     width: 75%;
@@ -12,7 +12,7 @@
 }
 
 @media screen and (max-width: 768px){
-    .ShowServer{
+    .AddServer{
         margin-left: 50%;
         margin-top: 10%;
     }

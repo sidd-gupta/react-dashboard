@@ -11,7 +11,7 @@ class ScreenBanner extends Component {
                 <div className="rectangle1"><img alt="profile" src={require('../images/kaiburr.png')} className="kaiburr" />
                     <div className="workSpace"><h1>Work Space</h1></div>
                     <div className="menu">
-                        <div className="menuHeader">Manage  Servers</div>
+                        <div className="menuHeader"><b>Manage  Servers</b></div>
                         <div className="tabcontent">
                             {
                                 Object.keys(domains).map(key => {
