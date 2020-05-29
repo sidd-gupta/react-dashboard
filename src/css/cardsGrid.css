@@ -1,0 +1,51 @@
+.cardsGrid{
+  position: relative;
+  margin-top:0;
+  margin-right: 0;
+}
+
+.cardsGrid > .card {
+  margin-top: 5%;
+  margin-left: 9%;
+  width: calc(20%);
+  display: inline-block;
+  vertical-align: top;
+}
+
+.cardHeader{
+  margin:20px;
+}
+
+
+.cardButton{
+  background: transparent;
+  color: #731A83;
+  border-color: rgba(115, 26, 131, 4);
+  transition: 0.2s;
+  font-size: 16px;
+  float: none;
+  width: 80%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+}
+
+
+
+@media screen and (max-width: 2560px){
+  .cardsGrid > .card {
+    margin-left: 5%;
+  }
+}
+@media screen and (max-width: 768px){
+  .cardsGrid > .card {
+    margin-top: 15%;  
+    margin-left: 2%;
+    width: calc(50%);
+  }
+}
+
+@media screen and (max-width: 450px){
+  .cardsGrid > .card {
+    width: calc(50% - 0px);
+  }
+}
