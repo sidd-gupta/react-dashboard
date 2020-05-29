@@ -1,0 +1,53 @@
+.loaderContainer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0,0,0,0.5);
+  z-index: 99999;
+}
+.loaderWrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.16);
+  border-radius: 1rem;
+  width: 260px;
+  padding: 20px;
+  overflow: hidden;
+}
+.LoaderWrapper.cancellable{
+  padding-bottom: 0;
+}
+
+.loader{
+  height: 4rem;
+  margin: auto;
+  display: block;
+}
+.loaderInfo{
+  font-size: 1rem;
+  text-align: center;
+}
+.loaderWrapper.cancellable .loaderCancel{
+  display: block;
+}
+
+.loaderCancel{
+  width: calc(100% + 40px);
+  position: relative;
+  left: -20px;
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+  margin-top: 1rem;
+  cursor: pointer;
+  color:  #0076FF;
+  display: none;
+}
+.loaderCancel:hover{
+  background: #f0f0f0;
+}

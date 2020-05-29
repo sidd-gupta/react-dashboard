@@ -1,10 +1,16 @@
 import React, { Component } from "react";
 import '../css/AddServer.css';
+import Loader from "./Loader.jsx";
 class AddServer extends Component {
+    state = {
+        isLoading: false,
+    };
     render() {
-        console.log(process.env.REACT_APP_DB_URL);
         return (
             <React.Fragment>
+                {
+                    this.state.isLoading ? <Loader /> : null
+                }
                 <div className="AddServer">
                     <h3><b>Add Server</b></h3>
                     <hr className="hr" />

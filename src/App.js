@@ -26,19 +26,6 @@ class App extends Component {
     // method: 'POST',
     // body: data
     // })
-
-
-
-    fetch(`${process.env.REACT_APP_DB_URL}`)
-      .then(res => res.json())
-      .then(
-        (result) => {
-          this.setState({
-            isLoaded: true,
-            items: result.items
-          });
-        }
-      )
   }
 
 

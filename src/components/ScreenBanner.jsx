@@ -22,7 +22,7 @@ class ScreenBanner extends Component {
                                             <dl>
                                                 <dt >
                                                     {
-                                                        this.props.selected === domain.domainNo ? <img alt="logo" style={{ height: '32px' }} src={require("../images/selected1.png")} /> : ""
+                                                        this.props.selected === domain.domainNo ? <img alt="logo" style={{ height: '32px' }} src={require("../images/selected1.png")} /> : null
                                                     }
                                                     <img alt="logo" style={{ height: '32px' }} src={require("../images/" + domain.domainLogo)} />
                                                     <Label onClick={() => this.props.onClick(domain.domainNo)}>{domain.domainName}</Label>
