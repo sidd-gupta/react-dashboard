@@ -4,6 +4,7 @@
     width: 75%;
     margin-top: 3%;
 }
+
 .hr{
     margin-top: 2%;
     margin-left: -1%;
@@ -11,11 +12,37 @@
     border: 1px solid black;
 }
 
+.searchBar{
+    width:20% !important;
+    border: 1px solid #731A83 !important; 
+    border-color: #731A83 !important;
+
+}
+
+.searchIcon{
+    color: #731A83 !important; 
+    margin-top: -4.9%;
+    margin-left: 18%;
+}
+
+.searchButton{
+    background-color: #731A83 !important;
+    color:white;
+    margin-left: 10%;
+    margin-top: -4.7%;
+}
+
 @media screen and (max-width: 768px){
+    .searchBar{
+        width:50% !important;
+        margin-left:2%;
+    }
+
     .ShowServer{
         margin-left: 50%;
         margin-top: 10%;
     }
+    
     .hr{
         margin-top: 5%;
         margin-left: -3%;
@@ -23,3 +50,66 @@
         border: 1px solid black;
     }
 }
+
+@media screen and (max-width: 320px){
+    ::placeholder{
+        font-size: 0.85rem;
+    }
+    .searchBar{
+        margin-left: -1%;
+        width:55%!important;     
+    }
+}
+
+@media screen and (max-width: 1440px){
+    .searchIcon{ 
+        margin-top: -5.9%;
+        margin-left: 17%;
+    }
+    .searchButton{
+        margin-left: 10%;
+        margin-top: -5.7%;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .searchIcon{ 
+        margin-top: -8%;
+    }
+    .searchButton{ 
+        margin-top: -8%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .searchIcon{ 
+        margin-top: -11%;
+        margin-left: 46.8%;
+    }
+    .searchButton{ 
+        margin-top: 5%;
+        margin-left: -31%;
+        margin-bottom: -12%;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .searchIcon{ 
+        margin-top: -20%;
+        margin-left: 43.8%;
+    }
+    .searchButton{ 
+        margin-left: -36%;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .searchIcon{ 
+        margin-top: -26%;
+        margin-left: 43.8%;
+    }
+    .searchButton{ 
+        margin-left: -43%;
+    }
+}
+
