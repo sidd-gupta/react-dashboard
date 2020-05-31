@@ -2,11 +2,13 @@ import React from 'react';
 import '../css/Loader.css';
 
 class Loader extends React.Component {
+
     onCancel() {
         if (this.props.cancellable && this.props.onCancel) {
             this.props.onCancel();
         }
     }
+
     render() {
         return (
             <div

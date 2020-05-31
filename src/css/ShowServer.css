@@ -32,9 +32,10 @@
     margin-top: -4.7%;
 }
 
+
 @media screen and (max-width: 768px){
     .searchBar{
-        width:50% !important;
+        width:55% !important;
         margin-left:2%;
     }
 
@@ -84,22 +85,22 @@
 @media screen and (max-width: 768px){
     .searchIcon{ 
         margin-top: -11%;
-        margin-left: 46.8%;
+        margin-left: 47.8%;
     }
     .searchButton{ 
         margin-top: 5%;
-        margin-left: -31%;
+        margin-left: -28%;
         margin-bottom: -12%;
     }
 }
 
 @media screen and (max-width: 425px){
     .searchIcon{ 
-        margin-top: -20%;
-        margin-left: 43.8%;
+        margin-top: -23%;
+        margin-left: 47.8%;
     }
     .searchButton{ 
-        margin-left: -36%;
+        margin-left: -44%;
     }
 }
 
@@ -109,7 +110,7 @@
         margin-left: 43.8%;
     }
     .searchButton{ 
-        margin-left: -43%;
+        margin-left: -45%;
     }
 }
 

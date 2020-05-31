@@ -4,22 +4,45 @@
     width: 75%;
     margin-top: 3%;
 }
+
 .hr{
     margin-top: 2%;
     margin-left: -1%;
-
     border: 1px solid black;
 }
 
+.serverForm{
+    margin-top: 5%;
+    margin-left: 25%
+}
+
+.submitButton{
+    background: white !important;
+    color: #731A83 !important;
+    border-color: rgba(115, 26, 131, 4) !important;
+    transition: 0.2s !important;
+    font-size: 16px !important;
+    float: none !important;
+    width: 80% !important;
+    margin-left: 10% !important;
+}
+  
 @media screen and (max-width: 768px){
     .AddServer{
         margin-left: 50%;
         margin-top: 10%;
     }
+
     .hr{
         margin-top: 5%;
         margin-left: -3%;
         width: 60%;
         border: 1px solid black;
+    }
+    
+    .serverForm{
+        margin-top: 5%;
+        margin-left: 0%;
+        margin-right: 10%
     }
 }

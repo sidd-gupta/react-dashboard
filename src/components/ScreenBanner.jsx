@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import '../css/ScreenBanner.css';
 import domains from '../data/domains.jsx';
 import { Label } from "reactstrap";
+
 class ScreenBanner extends Component {
 
     render() {
-
         return (
             <div className="v2">
                 <div className="rectangle1"><img alt="profile" src={require('../images/kaiburr.png')} className="kaiburr" />

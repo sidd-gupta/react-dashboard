@@ -7,6 +7,7 @@
   background: rgba(0,0,0,0.5);
   z-index: 99999;
 }
+
 .loaderWrapper{
   position: absolute;
   top: 50%;
@@ -19,6 +20,7 @@
   padding: 20px;
   overflow: hidden;
 }
+
 .LoaderWrapper.cancellable{
   padding-bottom: 0;
 }
@@ -28,10 +30,12 @@
   margin: auto;
   display: block;
 }
+
 .loaderInfo{
   font-size: 1rem;
   text-align: center;
 }
+
 .loaderWrapper.cancellable .loaderCancel{
   display: block;
 }
@@ -48,6 +52,7 @@
   color:  #0076FF;
   display: none;
 }
+
 .loaderCancel:hover{
   background: #f0f0f0;
 }

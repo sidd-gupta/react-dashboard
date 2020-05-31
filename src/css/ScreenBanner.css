@@ -71,11 +71,11 @@
 }
 
 @media screen and (max-width: 1024px){
-
     .menuHeader{   
         margin-top: 38%;   
         margin-left: -7%;
     }
+    
     .v2 .tabcontent {
         margin-top: 104%;
         margin-left: 5%;
@@ -91,32 +91,36 @@
         width: 33%;
         height: 100%;
     }
+
     .kaiburr{
         width: 81%;
         height: 11%;
         position: absolute;
         left: 11%
-        
     }
+
     .v2 .workSpace {
         font-size: 120%;
     }
+    
     .menuHeader{   
         margin-top: 15%;   
         margin-left: 15%;
     }
+    
     .v2 .tabcontent {
         margin-top: 34%;
         margin-left: 5%;
         width: 90%
     }
 }
-@media screen and (max-width: 425px){
 
+@media screen and (max-width: 425px){
     .menuHeader{   
         margin-top: 38%;   
         margin-left: -7%;
     }
+    
     .v2 .tabcontent {
         margin-top: 124%;
         margin-left: 5%;
