@@ -6,9 +6,11 @@ import AddServer from './components/AddServer.jsx'
 class App extends Component {
   state = {
     selected: 1,
+    arrayObj: [],
   };
-  onClick = (v) => {
+  onClick = (v, arrayObj) => {
     this.setState({
+      arrayObj: arrayObj,
       selected: v
     })
   }
@@ -34,15 +36,19 @@ class App extends Component {
       <React.Fragment>
 
         <main className="react-dashboard">
-          <ScreenBanner selected={this.state.selected} onClick={this.onClick}>
-            <h1>Work Space</h1>
-          </ScreenBanner>
-          {
-            this.state.selected === 1 ?
-              <ShowServer />
-              :
-              <AddServer />
-          }
+          <section>
+            <nav>
+              <ScreenBanner selected={this.state.selected} onClick={this.onClick}>
+                <h1>Work Space</h1>
+              </ScreenBanner>
+            </nav>
+            {
+              this.state.selected === 1 ?
+                <ShowServer selected={this.state.selected} arrayObj={this.state.arrayObj} onClick={this.onClick} />
+                :
+                <AddServer selected={this.state.selected} arrayObj={this.state.arrayObj} onClick={this.onClick} />
+            }
+          </section>
         </main>
       </React.Fragment>
     );

@@ -19,6 +19,7 @@ class ShowServer extends Component {
   }
 
   fetchServers() {
+    this.setState({ isLoading: true });
     var fetchUrl;
     if (this.state.selectedServerId)
       fetchUrl = `${process.env.REACT_APP_DB_URL}/${this.state.selectedServerId}`;
@@ -44,21 +45,47 @@ class ShowServer extends Component {
           }
         }
       )
-      .catch((error) => { toast.error("Server Id could not be fetched" + error); });
+      .catch((error) => {
+        this.setState({
+          isLoading: false,
+          servers: undefined
+        });
+        toast.error("Server Id could not be fetched" + error);
+      });
   }
 
-  deleteServer(id) {
-    fetch(`${process.env.REACT_APP_DB_URL}` + id, {
+  async deleteServer(id) {
+    await fetch(`${process.env.REACT_APP_DB_URL}/${id}`, {
       method: 'DELETE',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-    }).then(response => response.json())
+    }).then(response => response)
+      .then(data => {
+        this.setState({ isLoading: false });
+        if (data.status === 200)
+          toast.success("Successfully deleted Server")
+      })
+    await this.setState({ isLoading: false });
+    await this.fetchServers();
   }
+
 
   onChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
+  }
+
+  async resetServers() {
+    await this.setState({
+      servers: [],
+      selectedServerId: "",
+    });
+    await this.fetchServers();
+  }
+
+  updateServerDetails(arrayObj) {
+    this.props.onClick(!this.props.selected, arrayObj);
   }
 
   render() {
@@ -68,16 +95,27 @@ class ShowServer extends Component {
         {
           this.state.isLoading ? <Loader /> : null
         }
-        <div className="ShowServer">
+        <section className="ShowServer">
           <h3><b>Server List</b></h3>
           <hr className="hr" />
-          <Input type="text" placeholder="Select Server Id" className="searchBar" name="selectedServerId" value={this.state.selectedServerId} onChange={this.onChange} />
-          <SearchIcon className="searchIcon" />
-          <Button className="searchButton" onClick={() => this.fetchServers()}>Search</Button>
+          <Row>
+            <Input type="text" placeholder="Select Server Id" className="searchBar" name="selectedServerId" value={this.state.selectedServerId} onChange={this.onChange} />
+            <SearchIcon className="searchIcon" />
+            <Button className="resetButton" onClick={() => this.resetServers()}>Reset</Button>
+            <Button className="searchButton" onClick={() => this.fetchServers()}>Search</Button>
+          </Row>
           <CardsGrid>
             {
               this.state.servers !== undefined ?
                 this.state.servers.map((ele, index) => {
+
+                  var arrayObj = [{
+                    "id": ele.id,
+                    "name": ele.name,
+                    "language": ele.language,
+                    "framework": ele.framework
+                  }];
+
                   return (
                     <React.Fragment key={index}>
                       <Card key={index}>
@@ -100,6 +138,11 @@ class ShowServer extends Component {
                             </Row>
                           </Col>
                         </CardBody>
+                        <button className="cardButton" onClick={() => this.updateServerDetails(arrayObj)}>
+                          {
+                            'Update'
+                          }
+                        </button>
                         <button className="cardButton" onClick={() => this.deleteServer(ele.id)}>
                           {
                             'Delete'
@@ -110,10 +153,10 @@ class ShowServer extends Component {
                   );
                 })
                 :
-                null
+                <h3 className="noServer"><b>No Data For Particular Server id</b></h3>
             }
           </CardsGrid>
-        </div>
+        </section>
       </React.Fragment>
     );
   }

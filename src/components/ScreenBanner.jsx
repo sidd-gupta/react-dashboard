@@ -25,7 +25,7 @@ class ScreenBanner extends Component {
                                                         this.props.selected === domain.domainNo ? <img alt="logo" style={{ height: '32px' }} src={require("../images/selected1.png")} /> : null
                                                     }
                                                     <img alt="logo" style={{ height: '32px' }} src={require("../images/" + domain.domainLogo)} />
-                                                    <Label onClick={() => this.props.onClick(domain.domainNo)}>{domain.domainName}</Label>
+                                                    <Label onClick={() => this.props.onClick(domain.domainNo, [])}>{domain.domainName}</Label>
                                                 </dt>
                                             </dl>
                                         </React.Fragment>

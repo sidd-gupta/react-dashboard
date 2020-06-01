@@ -1,14 +1,13 @@
 .ShowServer{
-    position: absolute;
+    position: relative;
     margin-left: 20%;
-    width: 75%;
     margin-top: 3%;
 }
 
 .hr{
     margin-top: 2%;
     margin-left: -1%;
-
+    width: 100%;
     border: 1px solid black;
 }
 
@@ -20,16 +19,27 @@
 }
 
 .searchIcon{
-    color: #731A83 !important; 
-    margin-top: -4.9%;
-    margin-left: 18%;
+    color: #731A83 !important;
+    margin-top: 0.5%; 
+    margin-left: -2%;
 }
 
 .searchButton{
+    position: relative;
     background-color: #731A83 !important;
     color:white;
-    margin-left: 10%;
-    margin-top: -4.7%;
+    margin-left: 2%;
+}
+
+.resetButton{
+    position: relative;
+    background-color: #731A83 !important;
+    color:white;
+    margin-left: 2%;
+}
+
+.noServer{
+    margin-top: 5%;
 }
 
 
@@ -40,7 +50,7 @@
     }
 
     .ShowServer{
-        margin-left: 50%;
+        margin-left: 45%;
         margin-top: 10%;
     }
     
@@ -50,6 +60,10 @@
         width: 60%;
         border: 1px solid black;
     }
+    .noServer{
+        margin-top: 15%;
+    }
+    
 }
 
 @media screen and (max-width: 320px){
@@ -62,55 +76,41 @@
     }
 }
 
-@media screen and (max-width: 1440px){
-    .searchIcon{ 
-        margin-top: -5.9%;
-        margin-left: 17%;
-    }
-    .searchButton{
-        margin-left: 10%;
-        margin-top: -5.7%;
-    }
-}
-
 @media screen and (max-width: 1024px){
     .searchIcon{ 
-        margin-top: -8%;
-    }
-    .searchButton{ 
-        margin-top: -8%;
+        margin-top: 1%;
+        margin-left: -3%;
     }
 }
 
 @media screen and (max-width: 768px){
-    .searchIcon{ 
-        margin-top: -11%;
-        margin-left: 47.8%;
+    .searchIcon{
+        margin-left: -4%;
     }
-    .searchButton{ 
-        margin-top: 5%;
-        margin-left: -28%;
-        margin-bottom: -12%;
+    .searchButton{
+        margin-top: 15%;
+        margin-left: 2%;
+    }
+    
+    .resetButton{
+        margin-top: 15%;
+        margin-left: -47%;
     }
 }
 
 @media screen and (max-width: 425px){
     .searchIcon{ 
-        margin-top: -23%;
-        margin-left: 47.8%;
-    }
-    .searchButton{ 
-        margin-left: -44%;
+        margin-top: 2%;
+        margin-left: -7%;
     }
 }
 
 @media screen and (max-width: 320px){
-    .searchIcon{ 
-        margin-top: -26%;
-        margin-left: 43.8%;
+    .searchBar{
+        margin-left: 3%;
     }
-    .searchButton{ 
-        margin-left: -45%;
+    .searchIcon{ 
+        margin-left: -9%;
     }
 }
 

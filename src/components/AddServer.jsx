@@ -18,7 +18,28 @@ class AddServer extends Component {
         this.setState({ [event.target.name]: event.target.value });
     }
 
+    componentDidMount() {
+        if (this.props.arrayObj.length) {
+            this.setState({
+                id: this.props.arrayObj[0].id,
+                name: this.props.arrayObj[0].name,
+                language: this.props.arrayObj[0].language,
+                framework: this.props.arrayObj[0].framework,
+            });
+        }
+    }
+
+    async resetInputServerDetails() {
+        this.setState({
+            id: "",
+            name: "",
+            language: "",
+            framework: ""
+        });
+    }
+
     submitServerDetails() {
+        this.setState({ isLoading: true });
         if (this.state.id && this.state.name && this.state.language && this.state.framework) {
             const payload =
             {
@@ -38,13 +59,26 @@ class AddServer extends Component {
                 body: JSON.stringify(payload),
 
             })
+                .then(response => response)
+                .then(data => {
+                    this.setState({ isLoading: false });
+                    if (data.status === 201 && !this.props.arrayObj.length)
+                        toast.success("Successfully added Server")
+                    else
+                        toast.success("Successfully updated Server")
+                }
+                )
         }
         else {
-            toast.error("Enter all the * marked details")
+            this.setState({ isLoading: false });
+            toast.error("Enter all * marked details")
         }
+        this.setState({ isLoading: false });
+        this.resetInputServerDetails();
     }
 
     render() {
+        console.log(this.state);
         return (
             <React.Fragment>
                 <ToastContainer enableMultiContainer position={toast.POSITION.TOP_RIGHT} />
