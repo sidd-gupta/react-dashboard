@@ -95,67 +95,69 @@ class ShowServer extends Component {
         {
           this.state.isLoading ? <Loader /> : null
         }
-        <section className="ShowServer">
-          <h3><b>Server List</b></h3>
+        <section>
+          <div className="ShowServer"><h3><b>Server List</b></h3></div>
           <hr className="hr" />
           <Row>
             <Input type="text" placeholder="Select Server Id" className="searchBar" name="selectedServerId" value={this.state.selectedServerId} onChange={this.onChange} />
             <SearchIcon className="searchIcon" />
-            <Button className="resetButton" onClick={() => this.resetServers()}>Reset</Button>
             <Button className="searchButton" onClick={() => this.fetchServers()}>Search</Button>
+            <Button className="resetButton" onClick={() => this.resetServers()}>Reset</Button>
           </Row>
-          <CardsGrid>
-            {
-              this.state.servers !== undefined ?
-                this.state.servers.map((ele, index) => {
+          <div className="ShowServer">
+            <CardsGrid>
+              {
+                this.state.servers !== undefined ?
+                  this.state.servers.map((ele, index) => {
 
-                  var arrayObj = [{
-                    "id": ele.id,
-                    "name": ele.name,
-                    "language": ele.language,
-                    "framework": ele.framework
-                  }];
+                    var arrayObj = [{
+                      "id": ele.id,
+                      "name": ele.name,
+                      "language": ele.language,
+                      "framework": ele.framework
+                    }];
 
-                  return (
-                    <React.Fragment key={index}>
-                      <Card key={index}>
-                        <div className={"cardHeader"}>
-                          <h4>
-                            #<b>{ele.id}</b>
-                          </h4>
-                        </div>
-                        <hr style={{ margin: '10px' }} />
-                        <CardBody>
-                          <Col>
-                            <Row>
-                              <p><b>Name:</b> {ele.name}</p>
-                            </Row>
-                            <Row>
-                              <p><b>Language:</b> {ele.language}</p>
-                            </Row>
-                            <Row>
-                              <p><b>Framework:</b> {ele.framework}</p>
-                            </Row>
-                          </Col>
-                        </CardBody>
-                        <button className="cardButton" onClick={() => this.updateServerDetails(arrayObj)}>
-                          {
-                            'Update'
-                          }
-                        </button>
-                        <button className="cardButton" onClick={() => this.deleteServer(ele.id)}>
-                          {
-                            'Delete'
-                          }
-                        </button>
-                      </Card>
-                    </React.Fragment>
-                  );
-                })
-                :
-                <h3 className="noServer"><b>No Data For Particular Server id</b></h3>
-            }
-          </CardsGrid>
+                    return (
+                      <React.Fragment key={index}>
+                        <Card key={index}>
+                          <div className={"cardHeader"}>
+                            <h4>
+                              #<b>{ele.id}</b>
+                            </h4>
+                          </div>
+                          <hr style={{ margin: '10px' }} />
+                          <CardBody>
+                            <Col>
+                              <Row>
+                                <p><b>Name:</b> {ele.name}</p>
+                              </Row>
+                              <Row>
+                                <p><b>Language:</b> {ele.language}</p>
+                              </Row>
+                              <Row>
+                                <p><b>Framework:</b> {ele.framework}</p>
+                              </Row>
+                            </Col>
+                          </CardBody>
+                          <button className="cardButton" onClick={() => this.updateServerDetails(arrayObj)}>
+                            {
+                              'Update'
+                            }
+                          </button>
+                          <button className="cardButton" onClick={() => this.deleteServer(ele.id)}>
+                            {
+                              'Delete'
+                            }
+                          </button>
+                        </Card>
+                      </React.Fragment>
+                    );
+                  })
+                  :
+                  <h3 className="noServer"><b>No Data For Particular Server id</b></h3>
+              }
+            </CardsGrid>
+          </div>
         </section>
       </React.Fragment>
     );

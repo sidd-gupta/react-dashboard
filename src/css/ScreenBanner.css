@@ -35,27 +35,6 @@
     overflow: none;   
 }
 
-.v2 .tabcontent {
-    position: absolute;
-    text-align: left;
-    color: black;
-    font-size: 140%;
-    font-weight: 20%;    
-    font-style: normal;
-    font-family: 'Segoe UI', Arial;
-    width: 100%;
-    margin-top: 45%;
-    height: 0.5%;
-    margin-left: 15%;
-}
-
-.menu{
-    position: absolute;
-    top: 25%;
-    width: 100%;
-    margin-left: 3.5%;
-}
-
 .menuHeader{
     position: absolute;
     text-align: center;
@@ -64,21 +43,32 @@
     font-weight: 40%;
     font-style: normal;
     font-family: 'Segoe UI', Arial;
+    width: 100%;
     height: 0.5%;
-    margin-left: 2%;
-    margin-top: 20%;
+    margin-left: 1%;
+    top: 30%;
     overflow: none;   
 }
 
-@media screen and (max-width: 1024px){
-    .menuHeader{   
-        margin-top: 38%;   
-        margin-left: -7%;
-    }
-    
+
+.v2 .tabcontent {
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 140%;
+    font-weight: 20%;    
+    font-style: normal;
+    font-family: 'Segoe UI', Arial;
+    width: 100%;
+    top: 39%;
+    height: 0.5%;
+    left: 4%;
+}
+
+@media screen and (max-width: 1211px){    
     .v2 .tabcontent {
-        margin-top: 104%;
-        margin-left: 5%;
+        top: 44%;
+        left: 4%;
         width: 90%
     }
 }
@@ -101,29 +91,5 @@
 
     .v2 .workSpace {
         font-size: 120%;
-    }
-    
-    .menuHeader{   
-        margin-top: 15%;   
-        margin-left: 15%;
-    }
-    
-    .v2 .tabcontent {
-        margin-top: 34%;
-        margin-left: 5%;
-        width: 90%
-    }
-}
-
-@media screen and (max-width: 425px){
-    .menuHeader{   
-        margin-top: 38%;   
-        margin-left: -7%;
-    }
-    
-    .v2 .tabcontent {
-        margin-top: 124%;
-        margin-left: 5%;
-        width: 90%
     }
 }

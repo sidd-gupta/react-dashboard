@@ -6,8 +6,8 @@
 
 .hr{
     margin-top: 2%;
-    margin-left: -1%;
-    width: 100%;
+    margin-left: 19% !important;
+    width: 78%;
     border: 1px solid black;
 }
 
@@ -15,14 +15,15 @@
     width:20% !important;
     border: 1px solid #731A83 !important; 
     border-color: #731A83 !important;
-
+    margin-left: 23%;
 }
 
 .searchIcon{
     color: #731A83 !important;
-    margin-top: 0.5%; 
+    margin-top: 0.3%; 
     margin-left: -2%;
 }
+
 
 .searchButton{
     position: relative;
@@ -38,79 +39,65 @@
     margin-left: 2%;
 }
 
+/* 
 .noServer{
     margin-top: 5%;
+} */
+
+@media screen and (max-width: 1200px){
+    .searchIcon{
+        margin-top: 0.5%;
+        margin-left: -3.2%;
+    }
 }
 
-
 @media screen and (max-width: 768px){
-    .searchBar{
-        width:55% !important;
-        margin-left:2%;
-    }
-
     .ShowServer{
-        margin-left: 45%;
-        margin-top: 10%;
+        margin-left: 50%;
+        margin-top: 6%;
     }
     
     .hr{
-        margin-top: 5%;
-        margin-left: -3%;
-        width: 60%;
-        border: 1px solid black;
+        margin-left: 36% !important;
     }
-    .noServer{
-        margin-top: 15%;
-    }
-    
-}
 
-@media screen and (max-width: 320px){
-    ::placeholder{
-        font-size: 0.85rem;
-    }
     .searchBar{
-        margin-left: -1%;
-        width:55%!important;     
+        width:55% !important;
+        margin-left: 38%; 
     }
-}
 
-@media screen and (max-width: 1024px){
-    .searchIcon{ 
-        margin-top: 1%;
-        margin-left: -3%;
-    }
-}
-
-@media screen and (max-width: 768px){
     .searchIcon{
         margin-left: -4%;
     }
+
     .searchButton{
-        margin-top: 15%;
+        margin-top: 5%;
+        margin-left: 50%;
+    }
+
+    .resetButton{
+        margin-top: 5%;
         margin-left: 2%;
     }
     
-    .resetButton{
+    /* .noServer{
         margin-top: 15%;
-        margin-left: -47%;
-    }
+    } */
+    
 }
 
-@media screen and (max-width: 425px){
-    .searchIcon{ 
-        margin-top: 2%;
-        margin-left: -7%;
+@media screen and (max-width: 525px){
+    .ShowServer{
+        margin-left: 47%;
+    }
+    ::placeholder{
+        font-size: 0.85rem;
+    }
+    .searchIcon{
+        margin-top:1.5%;
+        margin-left: -8%;
+    }
+    .searchButton{
+        margin-left: 47%;
     }
 }
-
-@media screen and (max-width: 320px){
-    .searchBar{
-        margin-left: 3%;
-    }
-    .searchIcon{ 
-        margin-left: -9%;
-    }
-}
-
