@@ -1,19 +1,20 @@
 .AddServer{
-    position: absolute;
+    position: relative;
     margin-left: 20%;
-    width: 75%;
     margin-top: 3%;
 }
 
-.hr{
-    margin-top: 2%;
-    margin-left: -1%;
+.hrAdd{
+    margin-top: 1%;
+    margin-left: 19% !important;
+    width: 78%;
     border: 1px solid black;
 }
 
 .serverForm{
-    margin-top: 5%;
-    margin-left: 25%
+    margin-top: 3% !important;
+    margin-left: 38%;
+    width:60%
 }
 
 .submitButton{
@@ -30,19 +31,29 @@
 @media screen and (max-width: 768px){
     .AddServer{
         margin-left: 50%;
-        margin-top: 10%;
+        margin-top: 6%;
     }
 
-    .hr{
+    .hrAdd{
+        margin-left: 36% !important;
         margin-top: 5%;
-        margin-left: -3%;
         width: 60%;
         border: 1px solid black;
     }
-    
+
     .serverForm{
-        margin-top: 5%;
-        margin-left: 0%;
-        margin-right: 10%
+        margin-left: 39%;
+        width: 95%
+    }    
+}
+
+
+@media screen and (max-width: 525px){
+    .AddServer{
+        margin-left: 46%;
     }
+    .serverForm{
+        margin-left: 37%;
+        width: 58.5%
+    }   
 }

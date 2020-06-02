@@ -5,13 +5,14 @@
 }
 
 .hr{
-    margin-top: 2%;
+    margin-top: 1%;
     margin-left: 19% !important;
     width: 78%;
     border: 1px solid black;
 }
 
 .searchBar{
+    margin-top: 1%;
     width:20% !important;
     border: 1px solid #731A83 !important; 
     border-color: #731A83 !important;
@@ -20,12 +21,13 @@
 
 .searchIcon{
     color: #731A83 !important;
-    margin-top: 0.3%; 
+    margin-top: 1.3%; 
     margin-left: -2%;
 }
 
 
 .searchButton{
+    margin-top: 1%;
     position: relative;
     background-color: #731A83 !important;
     color:white;
@@ -33,20 +35,22 @@
 }
 
 .resetButton{
+    margin-top: 1%;
     position: relative;
     background-color: #731A83 !important;
     color:white;
     margin-left: 2%;
 }
 
-/* 
+
 .noServer{
-    margin-top: 5%;
-} */
+    margin-top: 10%;
+    margin-left: 10%;
+}
 
 @media screen and (max-width: 1200px){
     .searchIcon{
-        margin-top: 0.5%;
+        margin-top: 1.5%;
         margin-left: -3.2%;
     }
 }
@@ -59,6 +63,9 @@
     
     .hr{
         margin-left: 36% !important;
+        margin-top: 5%;
+        width: 60%;
+        border: 1px solid black;
     }
 
     .searchBar{
@@ -80,9 +87,9 @@
         margin-left: 2%;
     }
     
-    /* .noServer{
-        margin-top: 15%;
-    } */
+    .noServer{
+        margin-left: -11%;
+    }
     
 }
 
@@ -94,7 +101,7 @@
         font-size: 0.85rem;
     }
     .searchIcon{
-        margin-top:1.5%;
+        margin-top: 2.5%;
         margin-left: -8%;
     }
     .searchButton{

@@ -85,9 +85,11 @@ class AddServer extends Component {
                 {
                     this.state.isLoading ? <Loader /> : null
                 }
-                <div className="AddServer">
-                    <h3><b>Add Server</b></h3>
-                    <hr className="hr" />
+                <section>
+                    <div className="AddServer">
+                        <h3><b>Add Server</b></h3>
+                    </div>
+                    <hr className="hrAdd" />
                     <div className="serverForm">
                         <div className="animated fadeIn">
                             <Row>
@@ -130,7 +132,7 @@ class AddServer extends Component {
                             </Row>
                         </div>
                     </div>
-                </div>
+                </section>
             </React.Fragment >
         );
     }
