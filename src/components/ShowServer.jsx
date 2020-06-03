@@ -12,6 +12,7 @@ class ShowServer extends Component {
     isLoading: true,
     servers: [],
     selectedServerId: "",
+    dataString: "",
   };
 
   componentDidMount() {
@@ -50,7 +51,13 @@ class ShowServer extends Component {
           isLoading: false,
           servers: undefined
         });
-        toast.error("Server Id could not be fetched" + error);
+        if (this.state.selectedServerId) {
+          this.setState({ dataString: "Server Id Does Not Exists" });
+          toast.error("Server Id Not Found");
+        } else {
+          this.setState({ dataString: "Server Data Not Found" });
+          toast.error("Server Data Not Found");
+        }
       });
   }
 
@@ -80,6 +87,7 @@ class ShowServer extends Component {
     await this.setState({
       servers: [],
       selectedServerId: "",
+      dataString: "",
     });
     await this.fetchServers();
   }
@@ -154,7 +162,7 @@ class ShowServer extends Component {
                     );
                   })
                   :
-                  <h3 className="noServer"><b>No Data For Particular Server id</b></h3>
+                  <h3 className="noServer"><b>{this.state.dataString}</b></h3>
               }
             </CardsGrid>
           </div>

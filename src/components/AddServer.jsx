@@ -43,10 +43,10 @@ class AddServer extends Component {
         if (this.state.id && this.state.name && this.state.language && this.state.framework) {
             const payload =
             {
-                "name": this.state.name,
-                "id": this.state.id,
-                "language": this.state.language,
-                "framework": this.state.framework
+                "name": this.state.name.trim(),
+                "id": this.state.id.trim(),
+                "language": this.state.language.trim(),
+                "framework": this.state.framework.trim()
             };
 
 
@@ -78,7 +78,6 @@ class AddServer extends Component {
     }
 
     render() {
-        console.log(this.state);
         return (
             <React.Fragment>
                 <ToastContainer enableMultiContainer position={toast.POSITION.TOP_RIGHT} />
