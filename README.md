@@ -36,5 +36,5 @@ http://134.209.153.237:3000
 
 
 <p align="center">
-Made with :heart: by Vishvam Bhadaas
+Made with :heart: by Vishvam Vyas
 </p>
