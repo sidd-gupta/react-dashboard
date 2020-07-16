@@ -16,14 +16,6 @@ npm start
 
 ---
 
-#### Server URL
-
-```sh
-http://134.209.153.237:3000
-```
-
----
-
 #### Screenshots
 
 ![k4](https://user-images.githubusercontent.com/30529572/83797288-f048e800-a691-11ea-88f0-b1e539730ee0.png)
