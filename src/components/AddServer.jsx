@@ -29,7 +29,7 @@ class AddServer extends Component {
         }
     }
 
-    async resetInputServerDetails() {
+    resetInputServerDetails() {
         this.setState({
             id: "",
             name: "",
