@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import '../css/ScreenBanner.css';
 import domains from '../data/domains.jsx';
-
+import { Label } from "reactstrap";
 
 class ScreenBanner extends Component {
 
     render() {
         return (
             <div className="v2">
-            
                     <div className="workSpace"><h1>Work Space</h1></div>
                     <div className="menuHeader"><b>Manage  Servers</b></div>
                     <div className="tabcontent">
@@ -34,7 +33,6 @@ class ScreenBanner extends Component {
                         }
                     </div>
                 </div>
-
         );
     }
 }
